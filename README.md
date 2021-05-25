@@ -33,7 +33,7 @@ Of course, you must generate the `token` with the following endpoint:
 ```
 POST - /api/v1/login
 ```
-The credentials must be specified in the body of the application, for example:
+The credentials must be specified in the body of the request, for example:
 ```json
 {
     "username": "admin",
