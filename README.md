@@ -40,5 +40,6 @@ The credentials must be specified in the body of the request, for example:
     "password": "1234"
 }
 ```
+You can check the [wiki](https://github.com/MrDave1999/quotes-backend/wiki/API-Endpoints) to see the endpoints to consume the API.
 
 **Curiosity:** I know that the name `quote` does not mean medical appointments but I put it because the name was shorter :D XD
