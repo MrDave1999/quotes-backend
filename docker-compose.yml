@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: app
+    env_file: .env
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html
+
+  mysql:
+    container_name: mysql
+    image: mysql
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db_backup:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_HOST: ${DB_HOST}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+
+volumes:
+  mysql_data:
+
+networks:
+  default:
+    name: 'quotesapp'
