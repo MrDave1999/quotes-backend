@@ -4,22 +4,36 @@ This is a REST API created in PHP + [Lumen](https://github.com/laravel/lumen). T
 
 ## Installation
 
-Simply clone the repository with the following command:
+**1.** Clone the repository:
 ```git
 git clone https://github.com/MrDave1999/quotes-backend.git
 ```
 
-Then, install the necessary dependencies with [composer](https://getcomposer.org/download/) (you need to redirect to the project's working directory):
-```composer
-composer install
+**2.** Change directory:
 ```
-You can also install the test database [here](https://gist.github.com/MrDave1999/47b5523d35848fd8b29b4315f47bf8f0/archive/0c84e321573c88ffd1d0bef80d39a2063146fb1a.zip) (is with MySQL).
+cd quotes-backend
+```
 
-You can import the test database with the following command (obviously, you must first create the database):
-```sql
-mysql -u username -p dbname < dbquotes.sql
+**3.** Copy the contents of .env.example to .env:
 ```
-In the command you need to specify the username and database name.
+cp .env.example .env
+```
+**Note:** If the `cp` command does not work in Windows, use `xcopy`.
+
+**4.**  Install the project dependencies:
+```
+docker run --rm -it -v $PWD:/app composer install
+```
+
+**5.** Build the image and initiate services:
+```
+docker-compose up --build -d
+```
+
+**6.** Access the application with this URL:
+```
+http://localhost:8080/
+```
 
 ## Consuming API
 
