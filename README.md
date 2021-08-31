@@ -14,7 +14,7 @@ git clone https://github.com/MrDave1999/quotes-backend.git
 cd quotes-backend
 ```
 
-**3.** Assign a user and group to the storage and bootstrap directories so that the web server can write to those directories:
+**3.** Change user and group to the storage and bootstrap directories so that the web server can write to those directories:
 ```
 chown -R www-data:www-data ./storage ./bootstrap
 ```
