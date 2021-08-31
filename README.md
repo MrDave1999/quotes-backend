@@ -16,7 +16,7 @@ cd quotes-backend
 
 **3.** Change user and group to the storage and bootstrap directories so that the web server can write to those directories:
 ```
-chown -R www-data:www-data ./storage ./bootstrap
+sudo chown -R www-data:www-data ./storage ./bootstrap
 ```
 
 **4.** Copy the contents of .env.example to .env:
