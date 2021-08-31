@@ -14,23 +14,28 @@ git clone https://github.com/MrDave1999/quotes-backend.git
 cd quotes-backend
 ```
 
-**3.** Copy the contents of .env.example to .env:
+**3.** Assign a user and group to the storage and bootstrap directories so that the web server can write to those directories:
+```
+chown -R www-data:www-data ./storage ./bootstrap
+```
+
+**4.** Copy the contents of .env.example to .env:
 ```
 cp .env.example .env
 ```
 **Note:** If the `cp` command does not work in Windows, use `xcopy`.
 
-**4.**  Install the project dependencies:
+**5.**  Install the project dependencies:
 ```
 docker run --rm -it -v $PWD:/app composer install
 ```
 
-**5.** Build the image and initiate services:
+**6.** Build the image and initiate services:
 ```
 docker-compose up --build -d
 ```
 
-**6.** Access the application with this URL:
+**7.** Access the application with this URL:
 ```
 http://localhost:8080/
 ```
