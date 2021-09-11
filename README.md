@@ -19,23 +19,29 @@ cd quotes-backend
 sudo chown -R www-data:www-data ./storage ./bootstrap
 ```
 
-**4.** Copy the contents of .env.example to .env:
+**4.** Add your user to the `www-data` group and set write permissions to the group:
+```
+sudo usermod -aG www-data $USER
+sudo chmod -R g+w ./bootstrap
+```
+
+**5.** Copy the contents of .env.example to .env:
 ```
 cp .env.example .env
 ```
 **Note:** If the `cp` command does not work in Windows, use `xcopy`.
 
-**5.**  Install the project dependencies:
+**6.**  Install the project dependencies:
 ```
 docker run --rm -it -v $PWD:/app composer install
 ```
 
-**6.** Build the image and initiate services:
+**7.** Build the image and initiate services:
 ```
 docker-compose up --build -d
 ```
 
-**7.** Access the application with this URL:
+**8.** Access the application with this URL:
 ```
 http://localhost:8080/
 ```
