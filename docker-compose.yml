@@ -3,7 +3,6 @@ version: "3.8"
 services:
   app:
     build: .
-    container_name: app
     env_file: .env
     ports:
       - 8080:80
@@ -11,7 +10,6 @@ services:
       - ./:/var/www/html
 
   mysql:
-    container_name: mysql
     image: mysql
     volumes:
       - mysql_data:/var/lib/mysql
