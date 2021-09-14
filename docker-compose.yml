@@ -5,7 +5,7 @@ services:
     build: .
     env_file: .env
     ports:
-      - 8080:80
+      - ${APP_PORT}:80
     volumes:
       - ./:/var/www/html
 
