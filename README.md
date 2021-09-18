@@ -4,6 +4,8 @@ This is a REST API created in PHP + [Lumen](https://github.com/laravel/lumen). T
 
 ## Installation
 
+### On Linux:
+
 **1.** Clone the repository:
 ```git
 git clone https://github.com/MrDave1999/quotes-backend.git
@@ -29,7 +31,6 @@ sudo chmod -R g+w ./bootstrap
 ```
 cp .env.example .env
 ```
-**Note:** If the `cp` command does not work in Windows, use `xcopy`.
 
 **6.**  Install the project dependencies:
 ```
@@ -42,6 +43,38 @@ docker-compose up --build -d
 ```
 
 **8.** Access the application with this URL:
+```
+http://localhost:8080/
+```
+
+### On Windows:
+
+**1.** Clone the repository:
+```git
+git clone https://github.com/MrDave1999/quotes-backend.git
+```
+
+**2.** Change directory:
+```
+cd quotes-backend
+```
+
+**3.** Copy the contents of .env.example to .env:
+```
+xcopy .env.example .env
+```
+
+**4.**  Install the project dependencies:
+```
+docker run --rm -it -v %cd%:/app composer install
+```
+
+**5.** Build the image and initiate services:
+```
+docker-compose up --build -d
+```
+
+**6.** Access the application with this URL:
 ```
 http://localhost:8080/
 ```
