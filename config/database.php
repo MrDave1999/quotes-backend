@@ -6,12 +6,12 @@ return [
     [
         'mysql' => 
         [
-            'driver'    =>      $_ENV['DB_CONNECTION'],
-            'host'      =>      $_ENV['DB_HOST'],
-            'port'      =>      $_ENV['DB_PORT'],
-            'database'  =>      $_ENV['DB_DATABASE'],
-            'username'  =>      $_ENV['DB_USERNAME'],
-            'password'  =>      $_ENV['DB_PASSWORD']
+            'driver'    =>      ENV('DB_CONNECTION'),
+            'host'      =>      ENV('DB_HOST'),
+            'port'      =>      ENV('DB_PORT'),
+            'database'  =>      ENV('DB_DATABASE'),
+            'username'  =>      ENV('DB_USERNAME'),
+            'password'  =>      ENV('DB_PASSWORD')
         ]
     ]
 ];
