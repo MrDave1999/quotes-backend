@@ -27,7 +27,7 @@ sudo usermod -aG www-data $USER
 sudo chmod -R g+w ./bootstrap
 ```
 
-**5.** Copy the contents of .env.example to .env:
+**5.** Copy the contents of `.env.example` to `.env`:
 ```
 cp .env.example .env
 ```
@@ -59,7 +59,7 @@ git clone https://github.com/MrDave1999/quotes-backend.git
 cd quotes-backend
 ```
 
-**3.** Copy the contents of .env.example to .env:
+**3.** Copy the contents of `.env.example` to `.env`:
 ```
 xcopy .env.example .env
 ```
